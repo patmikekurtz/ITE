@@ -1,7 +1,11 @@
 myData <- read.csv("2019 All Data.csv")
 
 data <- transform(data,RepairFacilityOwnershipType=revalue(RepairFacilityOwnershipType,c("Rail Road"="Railroad")))
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> 399de34c2742fdd6480fd289232ef6de789405c3
 data<- data %>%
   mutate(myID = group_indices(., FullMarkCode, RepairDate))
 
@@ -41,12 +45,17 @@ EventsByLocation <- EventData %>%
   group_by(RepairFacilityName, RepairFacilityOwnershipType) %>%
   summarise(Events=n(), TotalSpend=sum(TotalCostDollars)) %>%
   arrange(desc(Events))
+<<<<<<< HEAD
 
+=======
+=======
+>>>>>>> 399de34c2742fdd6480fd289232ef6de789405c3
 
 MyData <- filter(data, ChargeDollars>0)
 
 data<- data %>%
    mutate(myID = group_indices(., CarID, RepairDate, RepairFacilityName))
+<<<<<<< HEAD
 
 
 
@@ -58,3 +67,6 @@ mydata <- mydata %>%
   
 
 
+=======
+>>>>>>> de304288338dc507338e13d86ab30b8e4ada5b1d
+>>>>>>> 399de34c2742fdd6480fd289232ef6de789405c3
